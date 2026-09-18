@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Workshop Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Student Workshop Registration System</h1>
+
+    <h2>Workshop Registration</h2>
+
+    <form id="registrationForm">
+
+        <label for="studentName">Full Name</label>
+        <input type="text" id="studentName" name="studentName">
+
+        <label for="studentId">Student ID</label>
+        <input type="text" id="studentId" name="studentId">
+
+        <label for="studentEmail">Email Address</label>
+        <input type="email" id="studentEmail" name="studentEmail">
+
+        <label for="workshop">Workshop</label>
+        <select id="workshop" name="workshop">
+            <option value="">Select a workshop</option>
+            <option value="HTML Basics">HTML Basics</option>
+            <option value="CSS Basics">CSS Basics</option>
+            <option value="JavaScript Basics">JavaScript Basics</option>
+        </select>
+
+        <br><br>
+
+        <button type="button" onclick="submitRegistration()">
+            Register
+        </button>
+
+        <p id="formMessage"></p>
+
+    </form>
+
+    <h3>Registration Data</h3>
+    <pre id="jsonOutput">No registration saved yet.</pre>
+
+    <h3>Saved Registration</h3>
+
+    <button type="button" onclick="showSavedRegistration()">
+        Show Saved Registration
+    </button>
+
+    <button type="button" onclick="clearRegistration()">
+        Clear Saved Registration
+    </button>
+
+    <p id="savedMessage"></p>
+    <section class="card">
+    <h2>Workshop Details</h2>
+
+    <p>Click the button to load workshop information.</p>
+
+    <button type="button" onclick="loadWorkshop()">
+        Load Workshop Details
+    </button>
+
+    <p><strong>Title:</strong> <span id="workshopTitle">Not loaded</span></p>
+    <p><strong>Date:</strong> <span id="workshopDate">Not loaded</span></p>
+    <p><strong>Venue:</strong> <span id="workshopVenue">Not loaded</span></p>
+    <p><strong>Seats:</strong> <span id="workshopSeats">Not loaded</span></p>
+
+    <p id="loadMessage"></p>
+</section>
+<section class="card">
+    <h2>Public API Practice</h2>
+
+    <button type="button" onclick="loadSampleUser()">
+        Load Sample User
+    </button>
+
+    <p id="apiUser">No API data loaded yet.</p>
+</section>
+<p><strong>Duration:</strong> <span id="workshopDuration">Not loaded</span></p>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
